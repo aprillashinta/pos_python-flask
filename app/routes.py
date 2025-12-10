@@ -1,5 +1,6 @@
 from app import app
 from app.controller import DosenController
+from flask import render_template
 
 @app.route('/')
 def index():
@@ -18,6 +19,10 @@ def dosens():
 @app.route('/dosen/<id>', methods=['GET'])
 def dosenDetail(id):
     return DosenController.detail(id)
+
+@app.route('/admin/<name>')
+def admin(name):
+    return render_template("index.html", content=name)
 
 
 # from app import app
