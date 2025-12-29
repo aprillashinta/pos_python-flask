@@ -28,7 +28,6 @@ def singleObject(data):
         "alamat": data.alamat
     }
 
-# GET detail dosen + mahasiswa bimbingan
 def detail(id):
     try:
         dosen = Dosen.query.filter_by(id=id).first()

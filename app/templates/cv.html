@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}CV Admin{% endblock %}
+
+{% block header %}
+Curriculum Vitae
+{% endblock %}
+
+{% block content %}
+
+<div style="
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    border:1px solid #e5e7eb;
+">
+
+    <!-- HEADER CV -->
+    <div style="display:flex; align-items:center; gap:30px; margin-bottom:35px;">
+        <div style="
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            background:linear-gradient(135deg,#1d4ed8,#3b82f6);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:40px;
+            font-weight:700;
+        ">
+            A
+        </div>
+
+        <div>
+            <h1 style="margin:0; color:#1e3a8a;">Admin Sistem Akademik</h1>
+            <p style="margin:6px 0; color:#475569;">Administrator Sistem Informasi Akademik</p>
+            <p style="margin:0; color:#64748b;">
+                Email: admin@kampus.ac.id <br>
+                Telepon: 08xxxxxxxxxx
+            </p>
+        </div>
+    </div>
+
+    <!-- PROFIL -->
+    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px;">
+        Profil Singkat
+    </h2>
+    <p style="color:#475569; line-height:1.7;">
+        Administrator Sistem Akademik yang bertanggung jawab dalam pengelolaan data dosen,
+        sistem informasi akademik, serta memastikan kelancaran operasional aplikasi berbasis web.
+        Memiliki ketelitian tinggi, kemampuan analisis sistem, dan pemahaman dasar pemrograman web.
+    </p>
+
+    <!-- PENDIDIKAN -->
+    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px; margin-top:30px;">
+        Pendidikan
+    </h2>
+    <ul style="color:#475569; line-height:1.8;">
+        <li>S1 Sistem Informasi – Universitas XXXXX</li>
+        <li>SMA/SMK – Jurusan XXXXX</li>
+    </ul>
+
+    <!-- KEAHLIAN -->
+    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px; margin-top:30px;">
+        Keahlian
+    </h2>
+    <ul style="color:#475569; line-height:1.8;">
+        <li>Manajemen Data Akademik</li>
+        <li>Penggunaan Sistem Informasi Akademik</li>
+        <li>Dasar Python & Flask</li>
+        <li>Pengelolaan Database</li>
+        <li>Administrasi Sistem</li>
+    </ul>
+
+    <!-- PENGALAMAN -->
+    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px; margin-top:30px;">
+        Pengalaman
+    </h2>
+    <ul style="color:#475569; line-height:1.8;">
+        <li>
+            Admin Sistem Akademik – Pengelolaan data dosen dan sistem akademik berbasis web.
+        </li>
+    </ul>
+
+    <!-- BUTTON -->
+    <div style="margin-top:40px; text-align:right;">
+        <a href="{{ url_for('dashboard') }}" style="
+            padding:12px 22px;
+            background:#1d4ed8;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-weight:600;
+        ">
+            ← Kembali ke Dashboard
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
