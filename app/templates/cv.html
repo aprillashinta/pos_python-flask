@@ -1,105 +1,132 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 
-{% block title %}CV Admin{% endblock %}
-
-{% block header %}
-Curriculum Vitae
+{% block title %}
+Portfolio Aprilla Addivi
 {% endblock %}
 
 {% block content %}
 
-<div style="
-    max-width:900px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    border:1px solid #e5e7eb;
-">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- HEADER CV -->
-    <div style="display:flex; align-items:center; gap:30px; margin-bottom:35px;">
-        <div style="
-            width:120px;
-            height:120px;
-            border-radius:50%;
-            background:linear-gradient(135deg,#1d4ed8,#3b82f6);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:white;
-            font-size:40px;
-            font-weight:700;
-        ">
-            A
+    <div style="font-family:'Inter', sans-serif; box-sizing:border-box; width: 100%; margin: 0; padding: 0;">
+
+        <div style="background-color: #030014; background-image: radial-gradient(at 80% 50%, #2c1a4d 0px, #030014 50%); color: white; padding-bottom: 60px;">
+            
+            <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:80px 8% 40px; min-height:70vh;">
+                
+                <div style="flex:1; min-width:320px; padding-right:40px; margin-bottom:40px;">
+                    <h2 style="font-size:28px; font-weight:700; color:#a78bfa; margin:0 0 10px 0;">Hello, I'm</h2>
+                    
+                    <h1 style="font-size:54px; font-weight:800; line-height:1.1; margin:0 0 25px 0;">
+                        Aprilla Addivi
+                    </h1>
+                    
+                    <p style="color:#94a3b8; line-height:1.7; margin-bottom:30px; font-size:16px; max-width:600px;">
+                        Seorang <strong>Quality Assurance Tester</strong> dan Mahasiswa Sistem Informasi. Saya berfokus pada pengujian manual & otomatis serta menciptakan pengalaman digital (UI/UX) yang menarik dan bebas bug.
+                    </p>
+
+                    <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                        <a href="https://github.com/aprillashinta" target="_blank" style="display:inline-flex; align-items:center; gap:10px; background:#8b5cf6; color:white; padding:12px 30px; border-radius:8px; text-decoration:none; font-weight:600; box-shadow:0 4px 15px rgba(139, 92, 246, 0.3);">
+                            <img src="{{ url_for('static', filename='github.png') }}" alt="Github" style="width:20px; height:20px; object-fit:contain;"> Go To Github
+                        </a>
+                        
+                        <a href="#" style="display:inline-block; background:transparent; color:#a78bfa; border:1px solid #a78bfa; padding:12px 30px; border-radius:8px; text-decoration:none; font-weight:600;">
+                            &lt;/&gt; View Projects
+                        </a>
+                    </div>
+                </div>
+
+                <div style="flex:1; min-width:300px; display:flex; justify-content:center; position:relative;">
+                    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:300px; height:300px; background:#7c3aed; filter:blur(90px); opacity:0.5; border-radius:50%; z-index:0;"></div>
+                    
+                    <div style="width:340px; height:340px; border-radius:50%; overflow:hidden; border:5px solid rgba(255, 255, 255, 0.1); position:relative; z-index:1; background:#1e293b;">
+                        <img src="{{ url_for('static', filename='poto2.jpg') }}" alt="Aprilla Addivi" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:20px; padding:0 8%; margin-top:20px;">
+                <div style="background:rgba(30, 41, 59, 0.6); border:1px solid rgba(255,255,255,0.1); padding:20px 30px; border-radius:12px; flex:1; min-width:150px;">
+                    <h3 style="margin:0; font-size:32px; font-weight:700;">4+</h3>
+                    <span style="font-size:12px; text-transform:uppercase; color:#94a3b8; letter-spacing:1px;">Years Experience</span>
+                </div>
+                <div style="background:rgba(30, 41, 59, 0.6); border:1px solid rgba(255,255,255,0.1); padding:20px 30px; border-radius:12px; flex:1; min-width:150px;">
+                    <h3 style="margin:0; font-size:32px; font-weight:700;">10+</h3>
+                    <span style="font-size:12px; text-transform:uppercase; color:#94a3b8; letter-spacing:1px;">Projects Done</span>
+                </div>
+                <div style="background:rgba(30, 41, 59, 0.6); border:1px solid rgba(255,255,255,0.1); padding:20px 30px; border-radius:12px; flex:1; min-width:150px;">
+                    <h3 style="margin:0; font-size:32px; font-weight:700;">3</h3>
+                    <span style="font-size:12px; text-transform:uppercase; color:#94a3b8; letter-spacing:1px;">Certificates</span>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <h1 style="margin:0; color:#1e3a8a;">Admin Sistem Akademik</h1>
-            <p style="margin:6px 0; color:#475569;">Administrator Sistem Informasi Akademik</p>
-            <p style="margin:0; color:#64748b;">
-                Email: admin@kampus.ac.id <br>
-                Telepon: 08xxxxxxxxxx
-            </p>
+
+        <div style="background-color: #f3f4f6; color: #1f2937; padding: 60px 8%;">
+
+            <h2 style="font-size:28px; font-weight:700; color:#111827; margin-bottom:30px;">Skills & Education</h2>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:30px; margin-bottom:60px;">
+                <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <h3 style="margin-top:0; font-size:18px; color:#374151; margin-bottom:20px;">Technical Skills</h3>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Quality Assurance</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Manual Testing</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Automation</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Figma</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">HTML & CSS</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Tailwind</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Laravel</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Yii2</span>
+                        <span style="background:#eff6ff; color:#2563eb; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500;">Jira</span>
+                    </div>
+                </div>
+
+                <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <h3 style="margin-top:0; font-size:18px; color:#374151; margin-bottom:20px;">Education</h3>
+                    
+                    <div style="margin-bottom:20px; border-bottom:1px solid #f3f4f6; padding-bottom:15px;">
+                        <h4 style="margin:0; font-size:16px; font-weight:700; color:#111827;">Universitas Duta Bangsa, Surakarta</h4>
+                        <p style="margin:5px 0 0; font-size:14px; color:#6b7280;">S1 Sistem Informasi | 2024 – Sekarang</p>
+                    </div>
+                    
+                    <div style="margin-bottom:0;">
+                        <h4 style="margin:0; font-size:16px; font-weight:700; color:#111827;">SMK Negeri 2 Surakarta</h4>
+                        <p style="margin:5px 0 0; font-size:14px; color:#6b7280;">Rekayasa Perangkat Lunak (RPL) | 2021 – 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="font-size:28px; font-weight:700; color:#111827; margin-bottom:30px;">Professional Experience</h2>
+
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom:20px;">
+                <h3 style="margin:0 0 5px; font-size:18px; color:#2563eb;">PT. Fingerspot Indonesia</h3>
+                <span style="display:block; font-size:14px; font-weight:600; color:#111827; margin-bottom:10px;">Quality Assurance Tester & UI/UX Analyst | Juni 2025 - Sekarang</span>
+                <p style="color:#4b5563; font-size:15px; line-height:1.6; margin:0;">
+                    Melakukan pengujian manual dan otomatis untuk modul web dan desktop, serta mendokumentasikan bug report di Jira. Menganalisis UI/UX Fingerspot.io menggunakan evaluasi heuristik.
+                </p>
+            </div>
+
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom:20px;">
+                <h3 style="margin:0 0 5px; font-size:18px; color:#2563eb;">CV. Infinindotech Karya Sejahtera</h3>
+                <span style="display:block; font-size:14px; font-weight:600; color:#111827; margin-bottom:10px;">Frontend Web Developer | April 2024 - November 2024</span>
+                <p style="color:#4b5563; font-size:15px; line-height:1.6; margin:0;">
+                    Mengembangkan aplikasi berbasis web menggunakan framework Yii2. Proyek meliputi MISTERMENU, MASJAKI (DPUPR), dan SHELTER (DISDAG Surakarta).
+                </p>
+            </div>
+
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom:20px;">
+                <h3 style="margin:0 0 5px; font-size:18px; color:#2563eb;">PT. Hackgov Digital Transformasi</h3>
+                <span style="display:block; font-size:14px; font-weight:600; color:#111827; margin-bottom:10px;">Internship | Juli 2023 - Desember 2023</span>
+                <p style="color:#4b5563; font-size:15px; line-height:1.6; margin:0;">
+                    Melakukan software manual testing untuk aplikasi e-commerce Yuspin App dan merancang UI/UX responsif untuk web Petshop POS.
+                </p>
+            </div>
+
+            <div style="text-align:center; margin-top:50px; color:#9ca3af; font-size:14px;">
+                &copy; 2025 Aprilla Addivi. All Rights Reserved.
+            </div>
+
         </div>
     </div>
-
-    <!-- PROFIL -->
-    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px;">
-        Profil Singkat
-    </h2>
-    <p style="color:#475569; line-height:1.7;">
-        Administrator Sistem Akademik yang bertanggung jawab dalam pengelolaan data dosen,
-        sistem informasi akademik, serta memastikan kelancaran operasional aplikasi berbasis web.
-        Memiliki ketelitian tinggi, kemampuan analisis sistem, dan pemahaman dasar pemrograman web.
-    </p>
-
-    <!-- PENDIDIKAN -->
-    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px; margin-top:30px;">
-        Pendidikan
-    </h2>
-    <ul style="color:#475569; line-height:1.8;">
-        <li>S1 Sistem Informasi – Universitas XXXXX</li>
-        <li>SMA/SMK – Jurusan XXXXX</li>
-    </ul>
-
-    <!-- KEAHLIAN -->
-    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px; margin-top:30px;">
-        Keahlian
-    </h2>
-    <ul style="color:#475569; line-height:1.8;">
-        <li>Manajemen Data Akademik</li>
-        <li>Penggunaan Sistem Informasi Akademik</li>
-        <li>Dasar Python & Flask</li>
-        <li>Pengelolaan Database</li>
-        <li>Administrasi Sistem</li>
-    </ul>
-
-    <!-- PENGALAMAN -->
-    <h2 style="color:#1e40af; border-bottom:2px solid #e5e7eb; padding-bottom:6px; margin-top:30px;">
-        Pengalaman
-    </h2>
-    <ul style="color:#475569; line-height:1.8;">
-        <li>
-            Admin Sistem Akademik – Pengelolaan data dosen dan sistem akademik berbasis web.
-        </li>
-    </ul>
-
-    <!-- BUTTON -->
-    <div style="margin-top:40px; text-align:right;">
-        <a href="{{ url_for('dashboard') }}" style="
-            padding:12px 22px;
-            background:#1d4ed8;
-            color:white;
-            text-decoration:none;
-            border-radius:10px;
-            font-weight:600;
-        ">
-            ← Kembali ke Dashboard
-        </a>
-    </div>
-
-</div>
-
 {% endblock %}
