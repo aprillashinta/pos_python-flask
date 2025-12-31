@@ -1,0 +1,271 @@
+{% extends "index.html" %}
+
+{% block title %}
+Portfolio Aprilla Shinta
+{% endblock %}
+
+{% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<div
+    style="font-family:'Plus Jakarta Sans', sans-serif; background:#0F172A; color:#F8FAFC; min-height:100vh; padding-bottom:40px;">
+
+    <section style="
+        background: radial-gradient(circle at top right, #1E3A8A 0%, #0F172A 60%);
+        padding: 100px 8% 140px;
+        position: relative;
+        overflow: hidden;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    ">
+        <div
+            style="max-width:1200px; margin:auto; display:grid; grid-template-columns:1.5fr 1fr; gap:60px; align-items:center;">
+
+            <div style="z-index: 10;">
+                <div style="
+                    display:inline-block;
+                    background:rgba(56, 189, 248, 0.1);
+                    color:#38BDF8;
+                    border: 1px solid rgba(56, 189, 248, 0.2);
+                    padding:10px 20px;
+                    border-radius:50px;
+                    font-size:14px;
+                    font-weight:700;
+                    margin-bottom:24px;
+                ">
+                    Quality Assurance & UI/UX Analyst
+                </div>
+
+                <h1 style="font-size:60px; font-weight:800; line-height:1.1; margin:0 0 24px; letter-spacing:-1px;">
+                    Hi, I'm <br>
+                    <span
+                        style="background: linear-gradient(to right, #818CF8, #38BDF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Aprilla Shinta
+                    </span>
+                </h1>
+
+                <p style="font-size:18px; line-height:1.8; color:#94A3B8; max-width:540px; margin-bottom:40px;">
+                    Seorang <strong>QA Tester</strong> dan Mahasiswa Sistem Informasi yang berdedikasi menciptakan
+                    software bebas bug dengan pengalaman pengguna (UX) yang intuitif dan presisi.
+                </p>
+
+                <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                    <a href="https://github.com/aprillashinta" target="_blank" style="
+                       background:#6366F1;
+                       color:white;
+                       padding:16px 36px;
+                       border-radius:50px;
+                       font-weight:700;
+                       text-decoration:none;
+                       transition:0.3s;
+                       box-shadow:0 10px 25px -5px rgba(99,102,241,0.5);
+                       border: 1px solid #6366F1;
+                       ">
+                        Github Profile
+                    </a>
+
+                    <a href="#" style="
+                       background:transparent;
+                       color:#F8FAFC;
+                       padding:16px 36px;
+                       border-radius:50px;
+                       font-weight:600;
+                       text-decoration:none;
+                       border:1px solid rgba(255,255,255,0.2);
+                       ">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+
+            <div style="display:flex; justify-content:center; position:relative;">
+                <div style="
+                    position:absolute; width:100%; height:100%; 
+                    background:#6366F1; filter:blur(80px); opacity:0.3; z-index:1;
+                "></div>
+
+                <div style="
+                    position:relative; z-index:2;
+                    background:rgba(30, 41, 59, 0.6);
+                    backdrop-filter: blur(10px);
+                    padding:15px;
+                    border-radius:40px;
+                    border: 1px solid rgba(255,255,255,0.1);
+                    transform: rotate(-3deg);
+                ">
+                    <img src="{{ url_for('static', filename='poto2.jpg') }}" alt="Aprilla Shinta" style="
+                         width:320px;
+                         height:400px;
+                         object-fit:cover;
+                         border-radius:30px;
+                         ">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="margin-top:-70px; padding:0 8%; position:relative; z-index:20;">
+        <div style="
+            max-width:1000px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:24px;
+        ">
+            {% set stats = [
+            ('2+', 'Years Experience'),
+            ('10+', 'Projects Completed'),
+            ('3', 'Professional Certs')
+            ] %}
+            {% for value, label in stats %}
+            <div style="
+                background:#1E293B;
+                border: 1px solid #334155;
+                border-radius:30px;
+                padding:30px;
+                text-align:center;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            ">
+                <h3 style="font-size:42px; margin:0; color:#38BDF8; font-weight:800;">{{ value }}</h3>
+                <p
+                    style="margin:8px 0 0; font-size:14px; font-weight:600; color:#94A3B8; text-transform:uppercase; letter-spacing:1px;">
+                    {{ label }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section style="padding:100px 8%; max-width:1100px; margin:auto;">
+
+        <div style="margin-bottom:100px;">
+            <h2 style="font-size:36px; font-weight:800; margin-bottom:40px; text-align:center;">
+                <span style="border-bottom: 4px solid #6366F1; padding-bottom:5px;">Technical Skills</span>
+            </h2>
+
+            <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
+                {% set skills = [
+                'Quality Assurance','Manual Testing','Automation Testing',
+                'Figma','HTML5 & CSS3','Tailwind CSS','Laravel Framework','Yii2','Jira Software','Git'
+                ] %}
+                {% for skill in skills %}
+                <span style="
+                    background:rgba(99, 102, 241, 0.1);
+                    color:#A5B4FC;
+                    border: 1px solid rgba(99, 102, 241, 0.2);
+                    padding:14px 28px;
+                    border-radius:50px;
+                    font-size:15px;
+                    font-weight:600;
+                    transition:0.3s;
+                ">
+                    {{ skill }}
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div style="margin-bottom:100px;">
+            <h2 style="font-size:36px; font-weight:800; margin-bottom:40px;">Experience</h2>
+
+            {% set experiences = [
+            (
+            'PT. Fingerspot Indonesia',
+            'Quality Assurance Tester & UI/UX Analyst',
+            'Juni 2025 - Sekarang',
+            'Melakukan pengujian manual dan otomatis, dokumentasi bug di Jira, serta analisis UI/UX Fingerspot.io untuk
+            memastikan kualitas produk.'
+            ),
+            (
+            'CV. Infinindotech Karya Sejahtera',
+            'Frontend Web Developer',
+            'April 2024 - Januari 2025',
+            'Mengembangkan aplikasi web berbasis Yii2 untuk proyek pemerintahan dan internal dengan fokus pada
+            responsivitas.'
+            ),
+            (
+            'PT. Hackgov Digital Transformasi',
+            'Internship Developer',
+            'Juli 2023 - Desember 2023',
+            'Manual testing e-commerce dan perancangan UI/UX responsif untuk sistem Point of Sales (POS).'
+            )
+            ] %}
+
+            <div style="display:grid; gap:30px;">
+                {% for company, role, date, desc in experiences %}
+                <div style="
+                    background:#1E293B;
+                    padding:40px;
+                    border-radius:32px;
+                    border: 1px solid #334155;
+                    transition: transform 0.2s;
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    gap: 15px;
+                ">
+                    <div
+                        style="display:flex; justify-content:space-between; flex-wrap:wrap; align-items:start; gap:10px;">
+                        <div>
+                            <h3 style="margin:0; font-size:22px; font-weight:700; color:#F1F5F9;">{{ company }}</h3>
+                            <span
+                                style="display:block; margin-top:6px; color:#818CF8; font-weight:600; font-size:16px;">
+                                {{ role }}
+                            </span>
+                        </div>
+                        <span style="
+                            background:#0F172A; 
+                            padding:8px 16px; 
+                            border-radius:20px; 
+                            font-size:13px; 
+                            color:#94A3B8; 
+                            font-weight:600;
+                            border: 1px solid #334155;
+                        ">
+                            {{ date }}
+                        </span>
+                    </div>
+
+                    <p style="margin:10px 0 0; color:#CBD5E1; line-height:1.7;">
+                        {{ desc }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div>
+            <h2 style="font-size:36px; font-weight:800; margin-bottom:40px;">Education</h2>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
+
+                <div style="background:#1E293B; padding:35px; border-radius:32px; border: 1px solid #334155;">
+                    <h4 style="margin:0; font-size:20px; color:#F1F5F9;">Universitas Duta Bangsa</h4>
+                    <p style="margin:10px 0 0; color:#94A3B8;">
+                        S1 Sistem Informasi<br>
+                        <span style="color:#818CF8; font-weight:600;">2024 – Sekarang</span>
+                    </p>
+                </div>
+
+                <div style="background:#1E293B; padding:35px; border-radius:32px; border: 1px solid #334155;">
+                    <h4 style="margin:0; font-size:20px; color:#F1F5F9;">SMK Negeri 2 Surakarta</h4>
+                    <p style="margin:10px 0 0; color:#94A3B8;">
+                        Rekayasa Perangkat Lunak (RPL)<br>
+                        <span style="color:#818CF8; font-weight:600;">2021 – 2024</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer style="text-align:center; padding:50px 0; border-top:1px solid #1E293B; color:#64748B;">
+        <p>Copyrighttt © 2025 Aprilla Shinta.</p>
+    </footer>
+
+</div>
+
+{% endblock %}

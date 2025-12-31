@@ -38,3 +38,7 @@ def dashboard():
 @app.route('/cv')
 def cv():
     return render_template("cv.html")
+
+@app.route('/cv2')
+def cv2():
+    return render_template("cv2.html")
